@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <title>signin-signup</title>
+</head>
+<body>
+     <style>  
+        #loader {
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            border: 8px solid #f3f3f3;
+            border-radius: 50%;
+            border-top-color: #3498db;
+            animation: spin 1s ease-in-out infinite;
+            margin: 1rem auto;
+        }
+    
+        #responseMessage{
+            margin: 1rem auto;
+        }
+        #loaderd {
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            border: 8px solid #f3f3f3;
+            border-radius: 50%;
+            border-top-color: #3498db;
+            animation: spin 1s ease-in-out infinite;
+            margin: 1rem auto;
+        }
+    
+        #responseMessaged{
+            margin: 1rem auto;
+        }
+    
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }</style>
+    <div class="container">
+        <div class="signin-signup">
+            <form action="" id="loginForm" class="sign-in-form">
+                <h2 class="title">Log in</h2>
+                <!-- <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Username">
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Password">
+                </div> -->
+                <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input type="Email" placeholder="Eimal" name="email" required>
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input type="text" placeholder="UniqueID" name="uniqueId" required>
+                </div>
+                <input type="submit" value="Login" class="btn">
+                <div id="loader" Style="display: none;" ></div>
+
+
+                <div id="responseMessage" style="display: none;"></div>
+                <p class="social-text">Or Sign up with social platform</p>
+                <div class="social-media">
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="" class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="" class="social-icon">
+                        <i class="fab fa-google"></i>
+                    </a>
+                    <a href="" class="social-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+                <p class="account-text">Don't have an account? <a href="#" id="sign-up-btn2">Sign up</a></p>
+            </form>
+            <form action="" id="signupForm"  class="sign-up-form">
+                <h2 class="title">Sign up</h2>
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="First Name" name="firstName" required>
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Last Name" name="LastName" required>
+                </div>
+            
+                <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Password" name="PassWord" required>
+                </div>
+                
+                <div class="input-field">
+                    <i class="fas fa-phone"></i>
+                    <input type="text" placeholder="PhoneNumber" name="PhonNumber"required>
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" placeholder="Eimal" name="email" required>
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-book"></i>
+                      <input type="text" placeholder="Age" name="Age" required>
+                  </div>
+            
+                  <input type="submit" value="sing up" class="btn">
+                  <div id="loader" Style="display: none;" ></div>
+  
+  
+                  <div id="responseMessage" style="display: none;"></div>
+                <p class="social-text">Or Loh in with social platform</p>
+                <div class="social-media">
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="" class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="" class="social-icon">
+                        <i class="fab fa-google"></i>
+                    </a>
+                    <a href="" class="social-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+               
+               
+                <p class="account-text">Already have an account? <a href="#" id="sign-in-btn2">Log in</a></p>
+            
+                <div id="loaderd" Style="display: none;" ></div>
+
+
+                <div id="responseMessaged" style="display: none;"></div>
+            </form>
+        </div>
+        <div class="panels-container">
+            <div class="panel left-panel">
+                <div class="content">
+                    <h3>Member your Email?</h3>
+                    <p>If you remember your email, write it so that you can access the site</p>
+                    <button class="btn" id="sign-in-btn">Log in</button>
+                </div>
+                <img src="about-img.png" alt="" class="image">
+            </div>
+            <div class="panel right-panel">
+                <div class="content">
+                    <h3>New User?</h3>
+                    <p>if you are a new user, you must first create an account in order to log in </p>
+                    <button class="btn" id="sign-up-btn">Sign up</button>
+                </div>
+                <img src="slider-img.png" alt="" class="image">
+            </div>
+        </div>
+    </div>
+       
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#loginForm').submit(function(event) {
+            event.preventDefault();
+            
+            $('#loader').show();
+            $('#responseMessage').hide();
+
+            $.ajax({
+                url: 'login.php',
+                type: 'POST',
+                data: $(this).serialize(),
+                success: function(response) {
+                    $('#loader').hide();
+                    $('#responseMessage').text(response).show();
+                },
+                error: function() {
+                    $('#loader').hide();
+                    $('#responseMessage').text('Error logging in.').show();
+                }
+            });
+        });
+
+        $('#signupForm').submit(function(event) {
+            event.preventDefault();
+            
+            $('#loaderd').show();
+            $('#responseMessaged').hide();
+
+            $.ajax({
+                url: 'SingUp.php',
+                type: 'POST',
+                data: $(this).serialize(),
+                success: function(response) {
+                    $('#loaderd').hide();
+                    $('#responseMessaged').text(response).show();
+                },
+                error: function() {
+                    $('#loaderd').hide();
+                    $('#responseMessaged').text('Error signing up.').show();
+                }
+            });
+        });
+    });
+</script>
+    <script src="main.js"></script>
+</body>
+</html>
