@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Sep 29, 2025 at 06:20 PM
+-- Generation Time: Sep 29, 2025 at 06:25 PM
 -- Server version: 8.0.42-0ubuntu0.24.04.1
 -- PHP Version: 8.3.6
 
@@ -74,7 +74,9 @@ CREATE TABLE `users` (
   `age` int NOT NULL,
   `uniqueId` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
-  `updated_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `updated_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `uniqueIdCreatedAt` datetime DEFAULT NULL,
+  `lastLogin` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
